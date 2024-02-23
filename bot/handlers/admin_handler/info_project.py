@@ -16,18 +16,19 @@ async def admin_info_project(message: CallbackQuery, state: FSMContext):
     await state.clear()
     id = message.from_user.id
     config = configuration()
+    course = round(config.course * ((config.capitalization + config.all_profit) / config.capitalization), 2)
     await bot.edit_message_text(chat_id=id,
                                 message_id=message.message.message_id,
                                 text=get_mes("info_project",
                                              requisites=config.requisites,
                                              commission=config.commission,
                                              capitalization=config.capitalization,
-                                             current_capitalization=config.capitalization+config.all_profit,
-                                             course=config.course,
+                                             current_capitalization=config.capitalization + config.all_profit,
+                                             course=course,
                                              profit_today=round(config.profit_today, 2),
                                              income=config.income,
                                              replenishment=config.replenishment,
-                                             withdrawal=round(config.withdrawal,2),
+                                             withdrawal=round(config.withdrawal, 2),
                                              ),
                                 reply_markup=kb.back_admin_menu_kb)
 

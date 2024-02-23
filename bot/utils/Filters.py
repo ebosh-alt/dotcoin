@@ -2,7 +2,7 @@ from aiogram import Router
 from aiogram.filters import Filter
 from aiogram.types import Message, User
 
-from bot.const import admin_id
+from bot.config import admin_id
 from bot.db import users
 
 router = Router()
