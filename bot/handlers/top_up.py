@@ -17,11 +17,13 @@ router = Router()
 @router.callback_query(Filters.IsUser(), F.data == "top_up_balance")
 async def start(message: CallbackQuery, state: FSMContext):
     id = message.from_user.id
-    await bot.edit_message_text(chat_id=id,
-                                message_id=message.message.message_id,
-                                text=get_mes("input_coin_top_up"))
+    await bot.delete_message(chat_id=id,
+                             message_id=message.message.message_id)
+
+    mes = await bot.send_message(chat_id=id,
+                                 text=get_mes("input_coin_top_up"))
     await state.set_state(States.top_up)
-    await state.update_data(topUp=TopUp(message_id=message.message.message_id))
+    await state.update_data(topUp=TopUp(message_id=mes.message_id))
 
 
 @router.message(States.top_up, F.content_type.in_({'text'}))
@@ -45,6 +47,8 @@ async def input_coin(message: Message, state: FSMContext):
 
 
 @router.message(States.top_up, F.photo)
+
+
 async def input_photo(message: Message, state: FSMContext):
     id = message.from_user.id
     user = users.get(id)
@@ -59,7 +63,8 @@ async def input_photo(message: Message, state: FSMContext):
     photo = FSInputFile(path)
     await state.update_data(topUp=top_up)
     await bot.delete_message(chat_id=id, message_id=message.message_id)
-    await bot.edit_message_text(chat_id=id, message_id=top_up.message_id, text="Ваш платеж на проверке администратора",
+    await bot.edit_message_text(chat_id=id, message_id=top_up.message_id,
+                                text="Ваш платеж на проверке администратора",
                                 reply_markup=kb.back_to_start)
     config = configuration()
 

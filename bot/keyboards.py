@@ -65,7 +65,7 @@ greeting_kb = create_keyboard(
     2, 1)
 
 del_mes_kb = create_keyboard({"Удалить уведомление": "del_notification"})
-back_to_start = create_keyboard({"Назад": "back_to_start"})
+back_to_start = create_keyboard({"Меню": "back_to_start"})
 profile_kb = create_keyboard({"Изменить реквизиты": "change_requisites_user", "Назад": "back_to_start"})
 admin_menu_kb = create_keyboard({"Общие данные": "info_project",
                                  "Изменить реквизиты": "change_requisites",

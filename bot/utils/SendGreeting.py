@@ -14,12 +14,10 @@ import matplotlib.pyplot as plt
 
 async def send(id: int, message: CallbackQuery = None):
     config = configuration()
-    # all_capital = config.capitalization + config.all_profit
-
     if config.turnover_users == 0:
         percent = 0
     else:
-        percent = round(((config.turnover - config.turnover_users) / config.turnover_users) * 100, 2)
+        percent = round(config.turnover / config.turnover_users, 2)
     value = config.statistics_diagram
     value.append(config.turnover)
     dm = Diagram(value=value)

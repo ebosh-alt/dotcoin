@@ -19,12 +19,13 @@ async def withdrawal_balance(message: CallbackQuery, state: FSMContext):
     id = message.from_user.id
     user = users.get(id)
     await state.set_state(States.withdrawal)
-    await bot.edit_message_text(chat_id=id,
-                                message_id=message.message.message_id,
-                                text=get_mes("withdrawal_count", count=user.count))
-    withdrawal = Withdrawal(message_id=message.message.message_id)
+    await bot.delete_message(chat_id=id,
+                             message_id=message.message.message_id)
 
-    await state.update_data(withdrawal=withdrawal)
+    mes = await bot.send_message(chat_id=id,
+                                 text=get_mes("withdrawal_count", count=user.count))
+
+    await state.update_data(withdrawal=Withdrawal(message_id=mes.message_id))
 
 
 @router.message(States.withdrawal, F.content_type.in_({'text'}))
