@@ -2,7 +2,7 @@ from aiogram import Router, F
 from aiogram.types import CallbackQuery
 
 from bot import keyboards as kb
-from bot.config import bot
+from bot.config import bot, link_chat
 from bot.db import users, configuration
 from bot.utils import SendGreeting
 from bot.utils.GetMessage import get_mes
@@ -19,12 +19,15 @@ async def payment(message: CallbackQuery):
     config = configuration()
     if "yesReplenishment" in message.data:
         user.count += count
-        config.all_profit += amount
-        config.profit_today += amount
+        config.turnover += amount
+        config.turnover_users += amount
         config.replenishment += amount
-        configuration.save(config)
-        users.update(user)
+        if not user.buy:
+            await bot.send_message(chat_id=id_user, text=get_mes("first_buy", link=link_chat), reply_markup=kb.del_mes_kb)
+            user.buy = True
         await bot.send_message(chat_id=id_user, text=get_mes("yes_replenishment"), reply_markup=kb.del_mes_kb)
+        users.update(user)
+        configuration.save(config)
     else:
         await bot.send_message(chat_id=id_user, text=get_mes("no_replenishment"), reply_markup=kb.del_mes_kb)
     await bot.answer_callback_query(callback_query_id=message.id,

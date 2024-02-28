@@ -1,5 +1,5 @@
-Капитализация проекта: _{{capitalization}} USDT_
-Оборот за сегодня: _{{profit}} USDT ({{percent}}%)_
-Сумма пополнений: _{{replenishment}} USDT_
-Сумма выводов: _{{withdrawal}} USDT_
-Прибыль: _{{income}} USDT_
+Капитализация проекта: _{{turnover}} TON_
+Оборот за сегодня: _{{turnoverUsers}} TON ({{percent}}%)_
+Сумма пополнений: _{{turnoverUsers}} TON_
+Сумма выводов: _{{withdrawal}} TON_
+Прибыль: _{{income}} TON_

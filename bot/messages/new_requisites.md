@@ -1,6 +1,6 @@
 Изменение реквизитов
 id пользователя: `{{user_id}}` 
 username: `{{username}}`
-количество дукат: `{{count}}`
-старые реквизиты: `{{requisites}}`
-новые реквизиты: `{{new_requisites}}`
+количество дукатов: `{{count}}`
+старые реквизиты кошелька Ton Space: `{{requisites}}`
+новые реквизиты кошелька Ton Space: `{{new_requisites}}`

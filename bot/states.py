@@ -8,7 +8,7 @@ class States(StatesGroup):
     change_commission = State()
     ban_unban = State()
     change_balance = State()
-    set_capitalization = State()
+    new_income = State()
     mailing = State()
     requisites = State()
     change_info = State()

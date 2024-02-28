@@ -1,5 +1,5 @@
 Ваши данные
 юзернейм: `{{username}}`
 id: `{{id}}`
-количество дукат: `{{countCoin}}`
-реквизиты: `{{requisites}}`
+количество дукатов: `{{countCoin}}`
+реквизиты кошелька TON Space: `{{requisites}}`

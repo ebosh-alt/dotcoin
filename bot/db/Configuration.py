@@ -1,20 +1,25 @@
 import json
 from dataclasses import dataclass
+from typing import Optional
 
 
 @dataclass
 class Config:
-    requisites: str = None
-    commission: float = 1.5
-    capitalization: float = 5000.00
-    course: float = 0.1
-    profit_today: float = 0.0
-    all_profit: float = 0.0
+    start_capital: float = 0.0
+    income_yesterday: float = 0.0
     income: float = 0.0
-    replenishment: float = 0.0
+    income_all: float = 0.0
     withdrawal: float = 0.0
-    info_text: str = None
-    path_photo: str = None
+    replenishment: float = 0.0
+    turnover_users: float = 0.0
+    turnover: float = 0.0
+    turnover_yesterday: float = 0.0
+    course: float = 0.0
+    commission: float = 0.0
+    statistics_diagram: Optional[list] = None
+    info_text: Optional[str] = None
+    path_photo: Optional[str] = None
+    requisites: Optional[str] = None
 
 
 class Configuration:
@@ -23,23 +28,28 @@ class Configuration:
 
     def __call__(self) -> Config:
         data = self.get()
-        config: Config = Config(data["requisites"],
-                                data["commission"],
-                                data["capitalization"],
-                                data["course"],
-                                data["profit_today"],
-                                data["all_profit"],
-                                data["income"],
-                                data["replenishment"],
-                                data["withdrawal"],
-                                data["info_text"],
-                                data["path_photo"],
-                                )
+        config: Config = Config(
+            data["start_capital"],
+            data["income_yesterday"],
+            data["income"],
+            data["income_all"],
+            data["withdrawal"],
+            data["replenishment"],
+            data["turnover_users"],
+            data["turnover"],
+            data["turnover_yesterday"],
+            data["course"],
+            data["commission"],
+            data["statistics_diagram"],
+            data["info_text"],
+            data["path_photo"],
+            data["requisites"],
+        )
         return config
 
     def get(self) -> dict:
         with open(self.path, "r+", encoding="UTF-8") as f:
-            obj = json.load(f)
+            obj: dict = json.load(f)
         return obj
 
     def save(self, obj) -> None:
@@ -49,3 +59,8 @@ class Configuration:
     def new_config(self):
         config = Config()
         self.save(config)
+
+
+if __name__ == '__main__':
+    a = Configuration("D:/telegram_bots/dotcoin/bot/db/configuration.json")
+    print(a())

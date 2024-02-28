@@ -42,7 +42,7 @@ async def input_coin_requisites(message: Message, state: FSMContext):
         return
     withdrawal.count = count
     withdrawal.amount = float(
-        withdrawal.count * round(config.course * ((config.capitalization + config.all_profit) / config.capitalization),
+        withdrawal.count * round(config.course + config.income_yesterday / config.turnover_yesterday,
                                  2))
     await bot.edit_message_text(chat_id=id,
                                 message_id=withdrawal.message_id,

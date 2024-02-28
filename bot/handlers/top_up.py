@@ -34,7 +34,7 @@ async def input_coin(message: Message, state: FSMContext):
         config = configuration()
         top_up.count = count
         top_up.amount = float(
-            count * round(config.course * ((config.capitalization + config.all_profit) / config.capitalization), 2))
+            count * round(config.course + config.income_yesterday / config.turnover_yesterday, 2))
         # top_up.amount = round(top_up.amount * (config.commission / 100 + 1), 2)
         await bot.delete_message(message_id=message.message_id, chat_id=id)
         await bot.edit_message_text(chat_id=id, message_id=top_up.message_id,

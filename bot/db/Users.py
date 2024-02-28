@@ -10,20 +10,18 @@ class User:
             self.name: str = kwargs.get("name")
             self.username: str = kwargs.get("username")
             self.ref_link: str = kwargs.get("ref_link")
-            self.balance: float = kwargs.get("balance")
-            self.all_balance: float = kwargs.get("all_balance")
             self.count: int = kwargs.get("count")
             self.requisites: str = kwargs.get("requisites")
             self.status: bool = kwargs.get("status")
+            self.buy: bool = kwargs.get("buy")
         else:
             self.name: str | None = None
             self.username: str | None = None
             self.ref_link: str | None = None
-            self.balance: float = 0.0
-            self.all_balance: float = 0.0
             self.count: int = 0
             self.requisites: str | None = None
             self.status: bool = True
+            self.buy: bool = False
 
     def __iter__(self):
         dict_class = self.__dict__
@@ -56,7 +54,7 @@ class Users(SqliteDatabase):
         self.del_instance(key)
         self.len -= 1
 
-    def __iter__(self) -> User:
+    def __iter__(self) -> User | bool:
         keys = self.get_keys()
         for id in keys:
             user = self.get(id)
@@ -70,11 +68,11 @@ class Users(SqliteDatabase):
                 name=obj_tuple[1],
                 username=obj_tuple[2],
                 ref_link=obj_tuple[3],
-                balance=obj_tuple[4],
-                all_balance=obj_tuple[5],
-                count=obj_tuple[6],
-                requisites=obj_tuple[7],
-                status=obj_tuple[8],
+                count=obj_tuple[4],
+                requisites=obj_tuple[5],
+                buy=obj_tuple[6],
+                status=obj_tuple[7],
+
             )
             return obj
         return False

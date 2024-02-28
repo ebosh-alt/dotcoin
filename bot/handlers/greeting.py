@@ -1,7 +1,7 @@
 from aiogram import Router
 from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
-from aiogram.types import Message
+from aiogram.types import Message, FSInputFile
 
 from bot import keyboards as kb
 from bot.config import bot, link_to_bot, ref_award, admin_id

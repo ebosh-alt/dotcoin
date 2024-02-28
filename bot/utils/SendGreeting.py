@@ -1,25 +1,38 @@
-from aiogram.types import CallbackQuery
+import random
+
+from aiogram.types import CallbackQuery, FSInputFile
 
 from bot.config import bot
 from bot.db import configuration
 from bot.utils.GetMessage import get_mes
 from bot import keyboards as kb
+from bot.utils.Diagram import Diagram
+import datetime
+
+import matplotlib.pyplot as plt
 
 
 async def send(id: int, message: CallbackQuery = None):
     config = configuration()
-    all_capital = config.capitalization + config.all_profit
-    prev_capital = config.capitalization + config.all_profit - config.profit_today
-    percent = round(((all_capital - prev_capital) / prev_capital) * 100, 2)
+    # all_capital = config.capitalization + config.all_profit
 
+    if config.turnover_users == 0:
+        percent = 0
+    else:
+        percent = round(((config.turnover - config.turnover_users) / config.turnover_users) * 100, 2)
+    value = config.statistics_diagram
+    value.append(config.turnover)
+    dm = Diagram(value=value)
+    photo = dm()
     if type(message) is CallbackQuery:
         await bot.delete_message(chat_id=id, message_id=message.message.message_id)
-    await bot.send_message(chat_id=id,
-                           text=get_mes("greeting",
-                                        capitalization=config.capitalization + config.all_profit,
-                                        profit=round(config.profit_today, 2),
-                                        percent=percent,
-                                        replenishment=config.replenishment,
-                                        withdrawal=round(config.withdrawal, 2),
-                                        income=config.income),
-                           reply_markup=kb.greeting_kb)
+    await bot.send_photo(chat_id=id,
+                         photo=photo,
+                         caption=get_mes("greeting",
+                                         turnover=config.turnover,
+                                         turnoverUsers=config.turnover_users,
+                                         percent=percent,
+                                         replenishment=config.replenishment,
+                                         withdrawal=config.withdrawal,
+                                         income=config.income_all),
+                         reply_markup=kb.greeting_kb)
