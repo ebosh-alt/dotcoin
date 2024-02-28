@@ -21,6 +21,7 @@ async def withdrawal_admin(message: CallbackQuery):
     if "yesWithdrawal" in message.data:
         user.count -= count
         config.turnover -= amount
+        config.turnover_today -= amount
         config.turnover_users -= amount
         config.withdrawal += amount
         configuration.save(config)

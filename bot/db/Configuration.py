@@ -7,13 +7,14 @@ from typing import Optional
 class Config:
     start_capital: float = 0.0
     income_yesterday: float = 0.0
-    income: float = 0.0
+    income_today: float = 0.0
     income_all: float = 0.0
     withdrawal: float = 0.0
     replenishment: float = 0.0
     turnover_users: float = 0.0
     turnover: float = 0.0
     turnover_yesterday: float = 0.0
+    turnover_today: float = 0.0
     course: float = 0.0
     commission: float = 0.0
     statistics_diagram: Optional[list] = None
@@ -31,13 +32,14 @@ class Configuration:
         config: Config = Config(
             data["start_capital"],
             data["income_yesterday"],
-            data["income"],
+            data["income_today"],
             data["income_all"],
             data["withdrawal"],
             data["replenishment"],
             data["turnover_users"],
             data["turnover"],
             data["turnover_yesterday"],
+            data["turnover_today"],
             data["course"],
             data["commission"],
             data["statistics_diagram"],

@@ -50,9 +50,10 @@ async def confirm_ban_unban(message: CallbackQuery, state: FSMContext):
     message_id = data["message_id"]
     income = data["income"]
     config = configuration()
-    config.income += income
+    config.income_today += income
     config.income_all += income
     config.turnover += income
+    config.turnover_today += income
     configuration.save(config)
     await state.clear()
     await bot.edit_message_text(chat_id=id,

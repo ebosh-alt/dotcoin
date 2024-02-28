@@ -20,6 +20,7 @@ async def payment(message: CallbackQuery):
     if "yesReplenishment" in message.data:
         user.count += count
         config.turnover += amount
+        config.turnover_today += amount
         config.turnover_users += amount
         config.replenishment += amount
         if not user.buy:

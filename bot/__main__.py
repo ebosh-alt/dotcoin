@@ -27,14 +27,12 @@ def schedule_checker():
 
 def clear_profit_today():
     config = configuration()
-    config.profit_today = 0
-    if len(config.capitalization_statistics) > 12:
-        del config.capitalization_statistics[0]
-        config.capitalization_statistics.append(config.turnover)
-    else:
-        config.capitalization_statistics.append(config.turnover)
-    config.income_yesterday = config.income
-    config.turnover_yesterday = config.turnover
+
+    del config.capitalization_statistics[0]
+    config.income_yesterday = config.income_today
+    config.turnover_yesterday = config.turnover_today
+    config.turnover_today = 0
+    config.income_today = 0
     configuration.save(config)
 
 
