@@ -25,8 +25,7 @@ async def greeting_user(message: Message, state: FSMContext):
         if ref_bos.isdigit():
             ref_bos_id = int(ref_bos)
             ref_bos = users.get(ref_bos_id)
-            ref_bos.balance += ref_award
-            ref_bos.all_balance += ref_award
+            ref_bos.count += ref_award
             await SendNotifications.send(id=ref_bos_id, text=get_mes("ref_award", amount=ref_award))
             mes = await bot.send_message(chat_id=admin_id,
                                          text=get_mes("ref_award_admin",

@@ -12,16 +12,16 @@ class User:
             self.ref_link: str = kwargs.get("ref_link")
             self.count: int = kwargs.get("count")
             self.requisites: str = kwargs.get("requisites")
-            self.status: bool = kwargs.get("status")
             self.buy: bool = kwargs.get("buy")
+            self.status: bool = kwargs.get("status")
         else:
             self.name: str | None = None
             self.username: str | None = None
             self.ref_link: str | None = None
             self.count: int = 0
             self.requisites: str | None = None
-            self.status: bool = True
             self.buy: bool = False
+            self.status: bool = True
 
     def __iter__(self):
         dict_class = self.__dict__
