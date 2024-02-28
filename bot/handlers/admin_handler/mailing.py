@@ -54,7 +54,7 @@ async def mes_mailing(message: Message, state: FSMContext):
     message_id = data["message_id"]
 
     file = message.photo[-1]
-    path = f"bot/receipts/{message.photo[-1].file_id}_{message.message_id}.jpg"
+    path = f"bot/mailing/{message.photo[-1].file_id}_{message.message_id}.jpg"
     await bot.download(
         file=file,
         destination=path
@@ -75,7 +75,7 @@ async def mes_mailing(message: Message, state: FSMContext):
     await bot.send_message(chat_id=id,
                            text="Рассылка закончилась",
                            reply_markup=kb.admin_menu_kb)
-    os.remove(path)
+    # os.remove(path)
 
 
 mailing_rt = router
