@@ -17,9 +17,9 @@ async def send(id: int, message: CallbackQuery = None):
     if config.turnover_users == 0:
         percent = 0
     else:
-        percent = round(config.turnover / config.turnover_users, 2)
+        percent = round(config.turnover_users * 100 / config.turnover, 2)
     value = config.statistics_diagram
-    value.append(config.turnover)
+    value.append(config.turnover_today)
     dm = Diagram(value=value)
     photo = dm()
     if type(message) is CallbackQuery:
@@ -32,5 +32,6 @@ async def send(id: int, message: CallbackQuery = None):
                                          percent=percent,
                                          replenishment=config.replenishment,
                                          withdrawal=config.withdrawal,
-                                         income=config.income_all),
+                                         income=config.income_all,
+                                         course=config.course),
                          reply_markup=kb.greeting_kb)

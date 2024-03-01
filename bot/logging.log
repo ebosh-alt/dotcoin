@@ -1,0 +1,718 @@
+INFO 2024-02-28 14:04:29,200 Start polling
+INFO 2024-02-28 14:04:29,391 Run polling for bot @MarketCat_bot id=6866175755 - 'MarketCat'
+INFO 2024-02-28 18:57:32,221 Update id=278302172 is handled. Duration 343 ms by bot id=6866175755
+INFO 2024-02-28 18:58:07,679 Update id=278302173 is handled. Duration 653 ms by bot id=6866175755
+INFO 2024-02-28 18:58:29,853 Update id=278302174 is not handled. Duration 199 ms by bot id=6866175755
+ERROR 2024-02-28 18:58:29,853 Cause exception while process update id=278302174 by bot id=6866175755
+TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/project/dotcoin/bot/handlers/profile.py", line 17, in profile
+    await bot.edit_message_text(message_id=message.message.message_id,
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/bot.py", line 1490, in edit_message_text
+    return await self(call, request_timeout=request_timeout)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/bot.py", line 441, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/session/base.py", line 257, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/session/aiohttp.py", line 179, in make_request
+    response = self.check_response(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+INFO 2024-02-28 18:58:47,108 Update id=278302175 is not handled. Duration 188 ms by bot id=6866175755
+ERROR 2024-02-28 18:58:47,109 Cause exception while process update id=278302175 by bot id=6866175755
+TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/project/dotcoin/bot/handlers/profile.py", line 17, in profile
+    await bot.edit_message_text(message_id=message.message.message_id,
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/bot.py", line 1490, in edit_message_text
+    return await self(call, request_timeout=request_timeout)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/bot.py", line 441, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/session/base.py", line 257, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/session/aiohttp.py", line 179, in make_request
+    response = self.check_response(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+INFO 2024-02-28 18:59:04,083 Update id=278302176 is handled. Duration 539 ms by bot id=6866175755
+INFO 2024-02-28 18:59:06,064 Update id=278302177 is not handled. Duration 67 ms by bot id=6866175755
+ERROR 2024-02-28 18:59:06,064 Cause exception while process update id=278302177 by bot id=6866175755
+TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/project/dotcoin/bot/handlers/profile.py", line 17, in profile
+    await bot.edit_message_text(message_id=message.message.message_id,
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/bot.py", line 1490, in edit_message_text
+    return await self(call, request_timeout=request_timeout)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/bot.py", line 441, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/session/base.py", line 257, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/session/aiohttp.py", line 179, in make_request
+    response = self.check_response(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+INFO 2024-02-28 19:00:08,646 Update id=278302178 is not handled. Duration 179 ms by bot id=6866175755
+ERROR 2024-02-28 19:00:08,646 Cause exception while process update id=278302178 by bot id=6866175755
+TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/project/dotcoin/bot/handlers/profile.py", line 17, in profile
+    await bot.edit_message_text(message_id=message.message.message_id,
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/bot.py", line 1490, in edit_message_text
+    return await self(call, request_timeout=request_timeout)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/bot.py", line 441, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/session/base.py", line 257, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/session/aiohttp.py", line 179, in make_request
+    response = self.check_response(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+INFO 2024-02-28 19:00:13,604 Update id=278302179 is handled. Duration 114 ms by bot id=6866175755
+INFO 2024-02-28 19:00:16,434 Update id=278302180 is handled. Duration 651 ms by bot id=6866175755
+INFO 2024-02-28 19:00:19,928 Update id=278302181 is not handled. Duration 63 ms by bot id=6866175755
+ERROR 2024-02-28 19:00:19,928 Cause exception while process update id=278302181 by bot id=6866175755
+TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/project/dotcoin/bot/handlers/profile.py", line 17, in profile
+    await bot.edit_message_text(message_id=message.message.message_id,
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/bot.py", line 1490, in edit_message_text
+    return await self(call, request_timeout=request_timeout)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/bot.py", line 441, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/session/base.py", line 257, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/session/aiohttp.py", line 179, in make_request
+    response = self.check_response(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+INFO 2024-02-28 19:00:38,805 Update id=278302182 is handled. Duration 208 ms by bot id=6866175755
+INFO 2024-02-28 19:00:40,908 Update id=278302183 is handled. Duration 93 ms by bot id=6866175755
+INFO 2024-02-28 19:00:55,555 Update id=278302184 is handled. Duration 177 ms by bot id=6866175755
+INFO 2024-02-28 19:01:31,540 Update id=278302185 is handled. Duration 273 ms by bot id=6866175755
+INFO 2024-02-28 19:01:37,448 Update id=278302186 is handled. Duration 373 ms by bot id=6866175755
+INFO 2024-02-28 19:01:39,441 Update id=278302187 is not handled. Duration 8 ms by bot id=6866175755
+ERROR 2024-02-28 19:01:39,441 Cause exception while process update id=278302187 by bot id=6866175755
+AttributeError: 'Config' object has no attribute 'income'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/project/dotcoin/bot/handlers/admin_handler/new_income.py", line 62, in confirm_ban_unban
+    f"Прибыль за сегодня: `{config.income}`"
+AttributeError: 'Config' object has no attribute 'income'
+INFO 2024-02-28 19:02:04,335 Update id=278302188 is handled. Duration 279 ms by bot id=6866175755
+INFO 2024-02-28 19:02:06,946 Update id=278302189 is handled. Duration 144 ms by bot id=6866175755
+INFO 2024-02-28 19:02:23,775 Update id=278302190 is handled. Duration 374 ms by bot id=6866175755
+INFO 2024-02-28 19:02:31,638 Update id=278302191 is handled. Duration 88 ms by bot id=6866175755
+INFO 2024-02-28 19:02:42,106 Update id=278302192 is handled. Duration 169 ms by bot id=6866175755
+INFO 2024-02-28 19:02:43,810 Update id=278302193 is handled. Duration 87 ms by bot id=6866175755
+INFO 2024-02-28 19:02:52,892 Update id=278302194 is handled. Duration 143 ms by bot id=6866175755
+INFO 2024-02-28 19:02:57,150 Update id=278302195 is handled. Duration 197 ms by bot id=6866175755
+INFO 2024-02-28 19:02:58,709 Update id=278302196 is handled. Duration 83 ms by bot id=6866175755
+INFO 2024-02-28 19:03:04,957 Update id=278302197 is handled. Duration 96 ms by bot id=6866175755
+INFO 2024-02-28 19:03:11,438 Update id=278302198 is handled. Duration 170 ms by bot id=6866175755
+INFO 2024-02-28 19:03:19,657 Update id=278302199 is handled. Duration 82 ms by bot id=6866175755
+INFO 2024-02-28 19:03:28,597 Update id=278302200 is handled. Duration 238 ms by bot id=6866175755
+INFO 2024-02-28 19:03:30,326 Update id=278302201 is not handled. Duration 6 ms by bot id=6866175755
+ERROR 2024-02-28 19:03:30,327 Cause exception while process update id=278302201 by bot id=6866175755
+AttributeError: 'Config' object has no attribute 'income'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/project/dotcoin/bot/handlers/admin_handler/new_income.py", line 62, in confirm_ban_unban
+    f"Прибыль за сегодня: `{config.income}`"
+AttributeError: 'Config' object has no attribute 'income'
+INFO 2024-02-28 19:03:38,499 Update id=278302202 is handled. Duration 346 ms by bot id=6866175755
+INFO 2024-02-28 19:03:40,331 Update id=278302203 is handled. Duration 138 ms by bot id=6866175755
+INFO 2024-02-28 19:06:46,593 Update id=278302204 is handled. Duration 387 ms by bot id=6866175755
+INFO 2024-02-28 19:06:59,230 Update id=278302205 is handled. Duration 86 ms by bot id=6866175755
+INFO 2024-02-28 19:07:03,694 Update id=278302206 is handled. Duration 250 ms by bot id=6866175755
+INFO 2024-02-28 19:07:05,391 Update id=278302207 is handled. Duration 155 ms by bot id=6866175755
+INFO 2024-02-28 19:07:15,988 Update id=278302208 is handled. Duration 465 ms by bot id=6866175755
+INFO 2024-02-28 19:07:47,989 Update id=278302209 is handled. Duration 206 ms by bot id=6866175755
+INFO 2024-02-28 19:07:54,284 Update id=278302210 is not handled. Duration 73 ms by bot id=6866175755
+ERROR 2024-02-28 19:07:54,284 Cause exception while process update id=278302210 by bot id=6866175755
+TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/project/dotcoin/bot/handlers/profile.py", line 17, in profile
+    await bot.edit_message_text(message_id=message.message.message_id,
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/bot.py", line 1490, in edit_message_text
+    return await self(call, request_timeout=request_timeout)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/bot.py", line 441, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/session/base.py", line 257, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/session/aiohttp.py", line 179, in make_request
+    response = self.check_response(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+INFO 2024-02-28 19:08:02,404 Update id=278302211 is handled. Duration 277 ms by bot id=6866175755
+INFO 2024-02-28 19:08:08,856 Update id=278302212 is handled. Duration 318 ms by bot id=6866175755
+INFO 2024-02-28 19:08:32,781 Update id=278302213 is not handled. Duration 203 ms by bot id=6866175755
+ERROR 2024-02-28 19:08:32,781 Cause exception while process update id=278302213 by bot id=6866175755
+FileNotFoundError: [Errno 2] No such file or directory: 'bot/receipts/replenishment/AgACAgIAAxkBAAIBKmXfhLA-htEjPGHUvoGL1nAAARYH_QACad0xG0vJ-Uo7zkK6SIycKgEAAwIAA3kAAzQE_298.jpg'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/project/dotcoin/bot/handlers/top_up.py", line 59, in input_photo
+    await bot.download(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/bot.py", line 428, in download
+    return await self.download_file(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/bot.py", line 383, in download_file
+    await self.__download_file(destination=destination, stream=stream)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/bot.py", line 331, in __download_file
+    async with aiofiles.open(destination, "wb") as f:
+  File "/usr/local/lib/python3.10/dist-packages/aiofiles/base.py", line 98, in __aenter__
+    self._obj = await self._coro
+  File "/usr/local/lib/python3.10/dist-packages/aiofiles/threadpool/__init__.py", line 94, in _open
+    f = yield from loop.run_in_executor(executor, cb)
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+FileNotFoundError: [Errno 2] No such file or directory: 'bot/receipts/replenishment/AgACAgIAAxkBAAIBKmXfhLA-htEjPGHUvoGL1nAAARYH_QACad0xG0vJ-Uo7zkK6SIycKgEAAwIAA3kAAzQE_298.jpg'
+INFO 2024-02-28 19:10:11,681 Update id=278302214 is handled. Duration 285 ms by bot id=6866175755
+INFO 2024-02-28 19:10:14,614 Update id=278302215 is handled. Duration 289 ms by bot id=6866175755
+INFO 2024-02-28 19:10:20,304 Update id=278302216 is not handled. Duration 98 ms by bot id=6866175755
+ERROR 2024-02-28 19:10:20,304 Cause exception while process update id=278302216 by bot id=6866175755
+FileNotFoundError: [Errno 2] No such file or directory: 'bot/receipts/replenishment/AgACAgIAAxkBAAIBLWXfhRyb9ssy9ZwuYCEBTTf9hBXOAAJp2zEb-fvwSqLI_IsAATatRQEAAwIAA3kAAzQE_301.jpg'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/project/dotcoin/bot/handlers/top_up.py", line 59, in input_photo
+    await bot.download(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/bot.py", line 428, in download
+    return await self.download_file(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/bot.py", line 383, in download_file
+    await self.__download_file(destination=destination, stream=stream)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/bot.py", line 331, in __download_file
+    async with aiofiles.open(destination, "wb") as f:
+  File "/usr/local/lib/python3.10/dist-packages/aiofiles/base.py", line 98, in __aenter__
+    self._obj = await self._coro
+  File "/usr/local/lib/python3.10/dist-packages/aiofiles/threadpool/__init__.py", line 94, in _open
+    f = yield from loop.run_in_executor(executor, cb)
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+FileNotFoundError: [Errno 2] No such file or directory: 'bot/receipts/replenishment/AgACAgIAAxkBAAIBLWXfhRyb9ssy9ZwuYCEBTTf9hBXOAAJp2zEb-fvwSqLI_IsAATatRQEAAwIAA3kAAzQE_301.jpg'
+INFO 2024-02-28 19:10:22,124 Update id=278302217 is handled. Duration 521 ms by bot id=6866175755
+INFO 2024-02-28 19:11:53,314 Update id=278302218 is handled. Duration 322 ms by bot id=6866175755
+INFO 2024-02-28 19:12:02,660 Update id=278302219 is handled. Duration 431 ms by bot id=6866175755
+INFO 2024-02-28 19:12:04,983 Update id=278302220 is handled. Duration 244 ms by bot id=6866175755
+INFO 2024-02-28 19:12:09,579 Update id=278302221 is handled. Duration 174 ms by bot id=6866175755
+INFO 2024-02-28 19:12:18,491 Update id=278302222 is not handled. Duration 66 ms by bot id=6866175755
+ERROR 2024-02-28 19:12:18,491 Cause exception while process update id=278302222 by bot id=6866175755
+FileNotFoundError: [Errno 2] No such file or directory: 'bot/receipts/replenishment/AgACAgIAAxkBAAIBNWXfhZLcmBSmUFMRmhB035b_MEMkAAJp3TEbS8n5SjvOQrpIjJwqAQADAgADeQADNAQ_309.jpg'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/project/dotcoin/bot/handlers/top_up.py", line 59, in input_photo
+    await bot.download(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/bot.py", line 428, in download
+    return await self.download_file(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/bot.py", line 383, in download_file
+    await self.__download_file(destination=destination, stream=stream)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/bot.py", line 331, in __download_file
+    async with aiofiles.open(destination, "wb") as f:
+  File "/usr/local/lib/python3.10/dist-packages/aiofiles/base.py", line 98, in __aenter__
+    self._obj = await self._coro
+  File "/usr/local/lib/python3.10/dist-packages/aiofiles/threadpool/__init__.py", line 94, in _open
+    f = yield from loop.run_in_executor(executor, cb)
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+FileNotFoundError: [Errno 2] No such file or directory: 'bot/receipts/replenishment/AgACAgIAAxkBAAIBNWXfhZLcmBSmUFMRmhB035b_MEMkAAJp3TEbS8n5SjvOQrpIjJwqAQADAgADeQADNAQ_309.jpg'
+INFO 2024-02-29 11:51:21,933 Update id=278302223 is handled. Duration 821 ms by bot id=6866175755
+INFO 2024-02-29 11:51:24,991 Update id=278302224 is not handled. Duration 77 ms by bot id=6866175755
+ERROR 2024-02-29 11:51:24,991 Cause exception while process update id=278302224 by bot id=6866175755
+TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/project/dotcoin/bot/handlers/profile.py", line 17, in profile
+    await bot.edit_message_text(message_id=message.message.message_id,
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/bot.py", line 1490, in edit_message_text
+    return await self(call, request_timeout=request_timeout)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/bot.py", line 441, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/session/base.py", line 257, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/session/aiohttp.py", line 179, in make_request
+    response = self.check_response(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+INFO 2024-02-29 12:02:23,398 Update id=278302225 is not handled. Duration 237 ms by bot id=6866175755
+ERROR 2024-02-29 12:02:23,399 Cause exception while process update id=278302225 by bot id=6866175755
+TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/project/dotcoin/bot/handlers/profile.py", line 17, in profile
+    await bot.edit_message_text(message_id=message.message.message_id,
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/bot.py", line 1490, in edit_message_text
+    return await self(call, request_timeout=request_timeout)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/bot.py", line 441, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/session/base.py", line 257, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/session/aiohttp.py", line 179, in make_request
+    response = self.check_response(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+INFO 2024-02-29 16:49:32,908 Update id=278302226 is handled. Duration 250 ms by bot id=6866175755
+INFO 2024-02-29 16:50:12,643 Update id=278302227 is handled. Duration 1055 ms by bot id=6866175755
+INFO 2024-02-29 16:50:17,958 Update id=278302228 is handled. Duration 230 ms by bot id=6866175755
+INFO 2024-02-29 16:50:21,077 Update id=278302229 is not handled. Duration 3 ms by bot id=6866175755
+ERROR 2024-02-29 16:50:21,077 Cause exception while process update id=278302229 by bot id=6866175755
+TemplateNotFound: error_withdrawal.md.md
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/project/dotcoin/bot/handlers/withdrawal.py", line 42, in input_coin_requisites
+    text=get_mes("error_withdrawal.md", count=user.count))
+  File "/project/dotcoin/bot/utils/GetMessage.py", line 11, in get_mes
+    tmpl = env.get_template(path)
+  File "/usr/local/lib/python3.10/dist-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/usr/local/lib/python3.10/dist-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/usr/local/lib/python3.10/dist-packages/jinja2/loaders.py", line 125, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python3.10/dist-packages/jinja2/loaders.py", line 344, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error_withdrawal.md.md

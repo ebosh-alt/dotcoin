@@ -26,27 +26,25 @@ def schedule_checker():
 
 
 def clear_profit_today():
+    print("clear")
     config = configuration()
-
-    del config.capitalization_statistics[0]
+    del config.statistics_diagram[0]
+    config.statistics_diagram.append(config.turnover)
+    config.course = round(config.course + (config.income_today / config.turnover_yesterday), 2)
     config.income_yesterday = config.income_today
-    config.turnover_yesterday = config.turnover_today
-    config.turnover_today = 0
+    config.turnover_yesterday = config.turnover
     config.income_today = 0
     configuration.save(config)
-
-
 
 
 if __name__ == "__main__":
     try:
         logging.basicConfig(level=logging.INFO,
-                            # filename=""
+                            filename="logging.log",
                             filemode="w",
                             format="%(levelname)s %(asctime)s %(message)s",
                             encoding='utf-8')
-        # check_by_diagram()
-        schedule.every().day.at("00:00").do(clear_profit_today)
+        schedule.every().day.at("21:00").do(clear_profit_today)
         thr = Thread(target=schedule_checker)
         thr.start()
         asyncio.run(main())

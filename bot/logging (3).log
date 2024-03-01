@@ -1,0 +1,78 @@
+INFO 2024-02-29 18:12:21,375 Start polling
+INFO 2024-02-29 18:12:21,559 Run polling for bot @MarketCat_bot id=6866175755 - 'MarketCat'
+INFO 2024-02-29 18:12:21,644 Update id=278302251 is not handled. Duration 4 ms by bot id=6866175755
+INFO 2024-02-29 18:12:58,620 Update id=278302252 is not handled. Duration 7 ms by bot id=6866175755
+INFO 2024-02-29 18:13:03,976 Update id=278302253 is handled. Duration 610 ms by bot id=6866175755
+INFO 2024-02-29 18:13:11,791 Update id=278302254 is handled. Duration 364 ms by bot id=6866175755
+INFO 2024-02-29 18:13:19,679 Update id=278302255 is handled. Duration 180 ms by bot id=6866175755
+INFO 2024-02-29 18:13:26,419 Update id=278302256 is handled. Duration 483 ms by bot id=6866175755
+INFO 2024-02-29 18:13:30,366 Update id=278302257 is handled. Duration 180 ms by bot id=6866175755
+INFO 2024-02-29 18:13:36,683 Update id=278302258 is handled. Duration 349 ms by bot id=6866175755
+INFO 2024-02-29 18:13:44,291 Update id=278302259 is handled. Duration 1238 ms by bot id=6866175755
+INFO 2024-02-29 18:13:49,708 Update id=278302260 is handled. Duration 761 ms by bot id=6866175755
+INFO 2024-02-29 18:13:54,786 Update id=278302261 is handled. Duration 345 ms by bot id=6866175755
+INFO 2024-02-29 18:13:56,762 Update id=278302262 is handled. Duration 200 ms by bot id=6866175755
+INFO 2024-02-29 18:13:59,667 Update id=278302263 is handled. Duration 348 ms by bot id=6866175755
+INFO 2024-02-29 18:14:04,818 Update id=278302264 is handled. Duration 723 ms by bot id=6866175755
+INFO 2024-02-29 18:14:11,921 Update id=278302265 is handled. Duration 111 ms by bot id=6866175755
+INFO 2024-02-29 18:14:13,672 Update id=278302266 is handled. Duration 111 ms by bot id=6866175755
+INFO 2024-02-29 18:14:35,113 Update id=278302267 is handled. Duration 932 ms by bot id=6866175755
+INFO 2024-02-29 18:14:40,010 Update id=278302268 is handled. Duration 154 ms by bot id=6866175755
+INFO 2024-02-29 18:14:42,141 Update id=278302269 is handled. Duration 652 ms by bot id=6866175755
+INFO 2024-02-29 18:14:44,219 Update id=278302270 is handled. Duration 293 ms by bot id=6866175755
+INFO 2024-02-29 18:14:44,991 Update id=278302271 is handled. Duration 152 ms by bot id=6866175755
+INFO 2024-02-29 18:14:48,805 Update id=278302272 is handled. Duration 226 ms by bot id=6866175755
+INFO 2024-02-29 18:14:52,083 Update id=278302273 is handled. Duration 286 ms by bot id=6866175755
+INFO 2024-02-29 18:14:56,361 Update id=278302275 is handled. Duration 208 ms by bot id=6866175755
+INFO 2024-02-29 18:14:56,789 Update id=278302274 is handled. Duration 696 ms by bot id=6866175755
+INFO 2024-02-29 18:15:00,804 Update id=278302276 is handled. Duration 845 ms by bot id=6866175755
+INFO 2024-02-29 18:15:07,402 Update id=278302277 is handled. Duration 187 ms by bot id=6866175755
+INFO 2024-02-29 18:15:10,224 Update id=278302278 is handled. Duration 88 ms by bot id=6866175755
+INFO 2024-02-29 18:15:15,327 Update id=278302279 is handled. Duration 115 ms by bot id=6866175755
+INFO 2024-02-29 18:15:21,423 Update id=278302280 is handled. Duration 152 ms by bot id=6866175755
+INFO 2024-02-29 18:15:23,269 Update id=278302281 is not handled. Duration 8 ms by bot id=6866175755
+ERROR 2024-02-29 18:15:23,269 Cause exception while process update id=278302281 by bot id=6866175755
+AttributeError: 'Config' object has no attribute 'income'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/project/dotcoin/bot/handlers/admin_handler/new_income.py", line 62, in confirm_ban_unban
+    f"Прибыль за сегодня: `{config.income}`"
+AttributeError: 'Config' object has no attribute 'income'
+INFO 2024-02-29 18:15:27,408 Update id=278302282 is not handled. Duration 6 ms by bot id=6866175755
+INFO 2024-02-29 18:15:39,587 Update id=278302283 is handled. Duration 240 ms by bot id=6866175755
+INFO 2024-02-29 18:15:40,512 Update id=278302284 is handled. Duration 221 ms by bot id=6866175755
+INFO 2024-02-29 18:15:41,968 Update id=278302285 is handled. Duration 616 ms by bot id=6866175755
+INFO 2024-02-29 18:15:42,309 Update id=278302286 is handled. Duration 95 ms by bot id=6866175755
+INFO 2024-02-29 18:15:43,915 Update id=278302287 is handled. Duration 656 ms by bot id=6866175755
+INFO 2024-02-29 18:16:09,096 Update id=278302288 is not handled. Duration 7 ms by bot id=6866175755

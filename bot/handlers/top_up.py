@@ -35,8 +35,7 @@ async def input_coin(message: Message, state: FSMContext):
         top_up: TopUp = data["topUp"]
         config = configuration()
         top_up.count = count
-        top_up.amount = float(
-            count * round(config.course + config.income_yesterday / config.turnover_yesterday, 2))
+        top_up.amount = float(count * config.course)
         # top_up.amount = round(top_up.amount * (config.commission / 100 + 1), 2)
         await bot.delete_message(message_id=message.message_id, chat_id=id)
         await bot.edit_message_text(chat_id=id, message_id=top_up.message_id,
@@ -47,8 +46,6 @@ async def input_coin(message: Message, state: FSMContext):
 
 
 @router.message(States.top_up, F.photo)
-
-
 async def input_photo(message: Message, state: FSMContext):
     id = message.from_user.id
     user = users.get(id)

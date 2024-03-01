@@ -1,0 +1,10 @@
+INFO 2024-02-29 18:12:21,375 Start polling
+INFO 2024-02-29 18:12:21,559 Run polling for bot @MarketCat_bot id=6866175755 - 'MarketCat'
+INFO 2024-02-29 18:12:21,644 Update id=278302251 is not handled. Duration 4 ms by bot id=6866175755
+INFO 2024-02-29 18:12:58,620 Update id=278302252 is not handled. Duration 7 ms by bot id=6866175755
+INFO 2024-02-29 18:13:03,976 Update id=278302253 is handled. Duration 610 ms by bot id=6866175755
+INFO 2024-02-29 18:13:11,791 Update id=278302254 is handled. Duration 364 ms by bot id=6866175755
+INFO 2024-02-29 18:13:19,679 Update id=278302255 is handled. Duration 180 ms by bot id=6866175755
+INFO 2024-02-29 18:13:26,419 Update id=278302256 is handled. Duration 483 ms by bot id=6866175755
+INFO 2024-02-29 18:13:30,366 Update id=278302257 is handled. Duration 180 ms by bot id=6866175755
+INFO 2024-02-29 18:13:36,683 Update id=278302258 is handled. Duration 349 ms by bot id=6866175755

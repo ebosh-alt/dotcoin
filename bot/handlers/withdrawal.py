@@ -39,12 +39,10 @@ async def input_coin_requisites(message: Message, state: FSMContext):
     if count > user.count:
         await bot.edit_message_text(chat_id=id,
                                     message_id=withdrawal.message_id,
-                                    text=get_mes("error_withdrawal.md", count=user.count))
+                                    text=get_mes("error_withdrawal", count=user.count))
         return
     withdrawal.count = count
-    withdrawal.amount = float(
-        withdrawal.count * round(config.course + config.income_yesterday / config.turnover_yesterday,
-                                 2))
+    withdrawal.amount = float(withdrawal.count * config.course)
     await bot.edit_message_text(chat_id=id,
                                 message_id=withdrawal.message_id,
                                 text=get_mes("withdrawal_receipts",

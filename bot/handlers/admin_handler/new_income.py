@@ -59,7 +59,7 @@ async def confirm_ban_unban(message: CallbackQuery, state: FSMContext):
     await bot.edit_message_text(chat_id=id,
                                 message_id=message_id,
                                 text=f"Капитилизация изменена: `{config.turnover}`\n"
-                                     f"Прибыль за сегодня: `{config.income}`"
+                                     f"Прибыль за сегодня: `{config.income_today}`"
                                      f"Общая прибыль: `{config.income_all}`",
                                 reply_markup=kb.admin_menu_kb)
 

@@ -1,0 +1,254 @@
+INFO 2024-02-29 19:51:07,618 Start polling
+INFO 2024-02-29 19:51:07,800 Run polling for bot @MarketCat_bot id=6866175755 - 'MarketCat'
+ERROR 2024-02-29 21:55:16,049 Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING 2024-02-29 21:55:16,050 Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6866175755)
+INFO 2024-02-29 21:55:27,233 Connection established (tryings = 1, bot id = 6866175755)
+ERROR 2024-02-29 23:33:34,301 Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING 2024-02-29 23:33:34,302 Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6866175755)
+INFO 2024-02-29 23:33:45,479 Connection established (tryings = 1, bot id = 6866175755)
+ERROR 2024-02-29 23:35:36,117 Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING 2024-02-29 23:35:36,117 Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6866175755)
+INFO 2024-02-29 23:35:47,295 Connection established (tryings = 1, bot id = 6866175755)
+ERROR 2024-02-29 23:37:37,940 Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING 2024-02-29 23:37:37,941 Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6866175755)
+INFO 2024-02-29 23:37:49,118 Connection established (tryings = 1, bot id = 6866175755)
+ERROR 2024-02-29 23:37:49,119 Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING 2024-02-29 23:37:49,119 Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6866175755)
+INFO 2024-02-29 23:38:00,298 Connection established (tryings = 1, bot id = 6866175755)
+ERROR 2024-02-29 23:39:50,965 Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING 2024-02-29 23:39:50,965 Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6866175755)
+INFO 2024-02-29 23:40:02,141 Connection established (tryings = 1, bot id = 6866175755)
+ERROR 2024-02-29 23:44:03,541 Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING 2024-02-29 23:44:03,541 Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6866175755)
+INFO 2024-02-29 23:44:14,718 Connection established (tryings = 1, bot id = 6866175755)
+ERROR 2024-02-29 23:46:45,584 Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING 2024-02-29 23:46:45,584 Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6866175755)
+INFO 2024-02-29 23:46:56,765 Connection established (tryings = 1, bot id = 6866175755)
+ERROR 2024-02-29 23:48:57,530 Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING 2024-02-29 23:48:57,530 Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6866175755)
+INFO 2024-02-29 23:49:08,706 Connection established (tryings = 1, bot id = 6866175755)
+INFO 2024-03-01 05:22:38,865 Update id=278302377 is handled. Duration 313 ms by bot id=6866175755
+INFO 2024-03-01 05:22:42,938 Update id=278302378 is handled. Duration 573 ms by bot id=6866175755
+INFO 2024-03-01 08:26:49,010 Update id=278302379 is handled. Duration 236 ms by bot id=6866175755
+INFO 2024-03-01 08:26:55,585 Update id=278302380 is handled. Duration 724 ms by bot id=6866175755
+INFO 2024-03-01 08:27:03,908 Update id=278302381 is handled. Duration 170 ms by bot id=6866175755
+INFO 2024-03-01 08:27:09,507 Update id=278302382 is handled. Duration 153 ms by bot id=6866175755
+INFO 2024-03-01 08:27:17,401 Update id=278302383 is handled. Duration 372 ms by bot id=6866175755
+INFO 2024-03-01 08:33:36,258 Update id=278302384 is handled. Duration 285 ms by bot id=6866175755
+INFO 2024-03-01 08:33:40,991 Update id=278302385 is handled. Duration 144 ms by bot id=6866175755
+INFO 2024-03-01 08:33:53,647 Update id=278302386 is handled. Duration 1 ms by bot id=6866175755
+INFO 2024-03-01 08:33:57,885 Update id=278302387 is handled. Duration 477 ms by bot id=6866175755
+INFO 2024-03-01 08:34:00,228 Update id=278302388 is handled. Duration 156 ms by bot id=6866175755
+INFO 2024-03-01 08:34:04,574 Update id=278302389 is handled. Duration 160 ms by bot id=6866175755
+INFO 2024-03-01 08:34:08,994 Update id=278302390 is not handled. Duration 4 ms by bot id=6866175755
+ERROR 2024-03-01 08:34:08,994 Cause exception while process update id=278302390 by bot id=6866175755
+ValueError: invalid literal for int() with base 10: '/info'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/project/dotcoin/bot/handlers/withdrawal.py", line 38, in input_coin_requisites
+    count = int(message.text)
+ValueError: invalid literal for int() with base 10: '/info'
+INFO 2024-03-01 08:34:15,588 Update id=278302391 is not handled. Duration 3 ms by bot id=6866175755
+ERROR 2024-03-01 08:34:15,588 Cause exception while process update id=278302391 by bot id=6866175755
+ValueError: invalid literal for int() with base 10: '/info'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/project/dotcoin/bot/handlers/withdrawal.py", line 38, in input_coin_requisites
+    count = int(message.text)
+ValueError: invalid literal for int() with base 10: '/info'
+INFO 2024-03-01 08:34:20,262 Update id=278302392 is handled. Duration 594 ms by bot id=6866175755
+INFO 2024-03-01 08:34:22,647 Update id=278302393 is handled. Duration 229 ms by bot id=6866175755
+INFO 2024-03-01 11:31:13,418 Update id=278302394 is handled. Duration 316 ms by bot id=6866175755
+INFO 2024-03-01 13:52:26,957 Update id=278302395 is handled. Duration 638 ms by bot id=6866175755
+INFO 2024-03-01 13:59:03,364 Update id=278302396 is handled. Duration 303 ms by bot id=6866175755
+INFO 2024-03-01 13:59:09,037 Update id=278302397 is handled. Duration 880 ms by bot id=6866175755
+INFO 2024-03-01 14:38:10,447 Update id=278302398 is handled. Duration 295 ms by bot id=6866175755
+INFO 2024-03-01 14:38:15,379 Update id=278302399 is handled. Duration 491 ms by bot id=6866175755
+INFO 2024-03-01 14:38:32,557 Update id=278302400 is not handled. Duration 189 ms by bot id=6866175755
+ERROR 2024-03-01 14:38:32,557 Cause exception while process update id=278302400 by bot id=6866175755
+AttributeError: 'bool' object has no attribute 'username'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/project/dotcoin/bot/handlers/profile.py", line 20, in profile
+    username=f"@{user.username}" if user.username else "Отсутсвует username",
+AttributeError: 'bool' object has no attribute 'username'
+INFO 2024-03-01 14:38:36,066 Update id=278302401 is handled. Duration 88 ms by bot id=6866175755
+INFO 2024-03-01 14:38:38,922 Update id=278302402 is handled. Duration 468 ms by bot id=6866175755
+INFO 2024-03-01 14:38:42,343 Update id=278302403 is handled. Duration 347 ms by bot id=6866175755
+INFO 2024-03-01 14:38:48,200 Update id=278302404 is handled. Duration 315 ms by bot id=6866175755
+ERROR 2024-03-01 15:23:54,855 Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING 2024-03-01 15:23:54,856 Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6866175755)
+INFO 2024-03-01 15:24:06,183 Connection established (tryings = 1, bot id = 6866175755)
+INFO 2024-03-01 16:38:56,689 Update id=278302405 is handled. Duration 267 ms by bot id=6866175755
+INFO 2024-03-01 16:39:00,633 Update id=278302406 is handled. Duration 131 ms by bot id=6866175755
+INFO 2024-03-01 16:39:56,765 Update id=278302407 is handled. Duration 297 ms by bot id=6866175755
+INFO 2024-03-01 16:40:08,998 Update id=278302408 is handled. Duration 95 ms by bot id=6866175755
+INFO 2024-03-01 16:40:29,231 Update id=278302409 is handled. Duration 1 ms by bot id=6866175755
+INFO 2024-03-01 16:40:33,246 Update id=278302410 is handled. Duration 1183 ms by bot id=6866175755
+INFO 2024-03-01 16:40:34,374 Update id=278302411 is handled. Duration 102 ms by bot id=6866175755
+INFO 2024-03-01 16:41:44,192 Update id=278302412 is handled. Duration 272 ms by bot id=6866175755
+INFO 2024-03-01 16:41:52,210 Update id=278302413 is handled. Duration 281 ms by bot id=6866175755
+INFO 2024-03-01 16:41:54,013 Update id=278302414 is handled. Duration 102 ms by bot id=6866175755
+INFO 2024-03-01 16:41:58,903 Update id=278302415 is handled. Duration 92 ms by bot id=6866175755
+INFO 2024-03-01 16:42:05,083 Update id=278302416 is handled. Duration 186 ms by bot id=6866175755
+INFO 2024-03-01 16:42:06,773 Update id=278302417 is handled. Duration 96 ms by bot id=6866175755
+INFO 2024-03-01 16:45:03,332 Update id=278302418 is handled. Duration 906 ms by bot id=6866175755
+INFO 2024-03-01 16:45:09,873 Update id=278302419 is handled. Duration 203 ms by bot id=6866175755
+INFO 2024-03-01 16:45:13,924 Update id=278302420 is handled. Duration 2 ms by bot id=6866175755
+INFO 2024-03-01 16:46:50,135 Update id=278302421 is handled. Duration 248 ms by bot id=6866175755
+INFO 2024-03-01 16:46:50,723 Update id=278302422 is handled. Duration 416 ms by bot id=6866175755
+INFO 2024-03-01 16:47:04,758 Update id=278302423 is handled. Duration 174 ms by bot id=6866175755
+INFO 2024-03-01 16:58:31,377 Update id=278302424 is handled. Duration 226 ms by bot id=6866175755
+INFO 2024-03-01 16:58:34,067 Update id=278302425 is handled. Duration 329 ms by bot id=6866175755
+INFO 2024-03-01 16:58:37,150 Update id=278302426 is handled. Duration 750 ms by bot id=6866175755
+INFO 2024-03-01 16:58:40,238 Update id=278302427 is handled. Duration 435 ms by bot id=6866175755
+INFO 2024-03-01 16:58:44,932 Update id=278302428 is handled. Duration 210 ms by bot id=6866175755
+INFO 2024-03-01 16:58:59,233 Update id=278302429 is handled. Duration 169 ms by bot id=6866175755
+INFO 2024-03-01 16:59:05,440 Update id=278302430 is handled. Duration 94 ms by bot id=6866175755
+INFO 2024-03-01 16:59:11,193 Update id=278302431 is handled. Duration 613 ms by bot id=6866175755
+INFO 2024-03-01 16:59:26,730 Update id=278302432 is handled. Duration 209 ms by bot id=6866175755
+INFO 2024-03-01 16:59:28,123 Update id=278302433 is handled. Duration 126 ms by bot id=6866175755
+INFO 2024-03-01 17:00:52,842 Update id=278302434 is handled. Duration 1179 ms by bot id=6866175755
+INFO 2024-03-01 17:01:07,152 Update id=278302435 is handled. Duration 378 ms by bot id=6866175755
+INFO 2024-03-01 17:02:39,143 Update id=278302436 is handled. Duration 1511 ms by bot id=6866175755
+INFO 2024-03-01 17:02:42,346 Update id=278302437 is handled. Duration 526 ms by bot id=6866175755
+INFO 2024-03-01 17:03:08,075 Update id=278302438 is handled. Duration 1574 ms by bot id=6866175755
+INFO 2024-03-01 17:03:10,645 Update id=278302439 is not handled. Duration 6 ms by bot id=6866175755
+INFO 2024-03-01 17:03:45,913 Update id=278302440 is handled. Duration 571 ms by bot id=6866175755
+INFO 2024-03-01 17:03:56,527 Update id=278302441 is handled. Duration 1067 ms by bot id=6866175755
+INFO 2024-03-01 17:04:00,069 Update id=278302442 is handled. Duration 184 ms by bot id=6866175755
+INFO 2024-03-01 17:05:53,258 Update id=278302443 is handled. Duration 870 ms by bot id=6866175755
+INFO 2024-03-01 17:06:25,753 Update id=278302444 is handled. Duration 838 ms by bot id=6866175755
+INFO 2024-03-01 17:06:39,593 Update id=278302445 is handled. Duration 157 ms by bot id=6866175755
+INFO 2024-03-01 17:06:56,066 Update id=278302446 is not handled. Duration 4 ms by bot id=6866175755
+ERROR 2024-03-01 17:06:56,066 Cause exception while process update id=278302446 by bot id=6866175755
+ValueError: invalid literal for int() with base 10: 'Где мои дукаты'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/project/dotcoin/bot/handlers/withdrawal.py", line 38, in input_coin_requisites
+    count = int(message.text)
+ValueError: invalid literal for int() with base 10: 'Где мои дукаты'
